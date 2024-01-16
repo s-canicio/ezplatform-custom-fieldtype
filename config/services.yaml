@@ -23,3 +23,24 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+    App\FieldType\CustomCollection\Type:
+        autoconfigure: false
+        autowire: true
+        public: true
+        parent: ezpublish.fieldType
+        tags:
+            - { name: ezplatform.field_type, alias: custom_matrix }
+
+    App\FieldType\CustomCollection\Converter\CustomMatrixConverter:
+        tags:
+            - { name: ezplatform.field_type.legacy_storage.converter, alias: custom_matrix }
+
+    App\FieldType\CustomCollection\Mapper\CustomMatrixFormMapper:
+        public: true
+        tags:
+            - { name: ezplatform.field_type.form_mapper.definition, fieldType: custom_matrix }
+            - { name: ezplatform.field_type.form_mapper.value, fieldType: custom_matrix }
+
+    App\FieldType\CustomCollection\Indexable:
+        tags:
+            - { name: ezplatform.field_type.indexable, alias: custom_matrix }

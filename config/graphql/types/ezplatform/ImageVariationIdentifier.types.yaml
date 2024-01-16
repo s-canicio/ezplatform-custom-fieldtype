@@ -1,0 +1,18 @@
+ImageVariationIdentifier:
+    type: enum
+    config:
+        values:
+            reference: {  }
+            small: {  }
+            tiny: {  }
+            medium: {  }
+            large: {  }
+            ezplatform_admin_ui_profile_picture_user_menu: {  }
+            full_width_3_2: {  }
+            full_width_2_3: {  }
+            half_width_3_2: {  }
+            half_width_2_3: {  }
+            third_width_3_2: {  }
+            third_width_2_3: {  }
+            fourth_width_3_2: {  }
+            fourth_width_2_3: {  }

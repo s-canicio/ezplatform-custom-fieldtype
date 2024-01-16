@@ -1,0 +1,26 @@
+{% block custom_matrix_field %}
+	{% set columnsSettings = fieldSettings['columns'] %}
+	{% set fieldData = field.value.rows %}
+
+	<div class="ez-scrollable-table-wrapper">
+		<table class="ez-table table table-hover ez-table--no-bordered-top">
+			<thead>
+			<tr>
+				{% for column in columnsSettings %}
+					<th>{{ column['name'] }}</th>
+				{% endfor %}
+			</tr>
+			</thead>
+			<tbody>
+			{% for data in fieldData %}
+				<tr>
+					{% for column in columnsSettings %}
+						coucou
+						<td>{{ data.cells[column['identifier']]|default }}</td>
+					{% endfor %}
+				</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+	</div>
+{% endblock %}
