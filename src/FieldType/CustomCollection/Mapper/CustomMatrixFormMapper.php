@@ -8,8 +8,8 @@ declare(strict_types=1);
 
 namespace App\FieldType\CustomCollection\Mapper;
 
-use App\FieldType\CustomCollection\Form\Type\ColumnType;
-use App\FieldType\CustomCollection\Form\Type\FieldType\CustomMatrixCollectionType;
+//use App\FieldType\CustomCollection\Form\Type\ColumnType;
+//use App\FieldType\CustomCollection\Form\Type\FieldType\CustomMatrixCollectionType;
 use App\FieldType\CustomCollection\Form\Type\FieldType\CustomMatrixFieldType;
 use EzSystems\EzPlatformAdminUi\FieldType\FieldDefinitionFormMapperInterface;
 use EzSystems\EzPlatformAdminUi\Form\Data\FieldDefinitionData;
@@ -40,21 +40,21 @@ class CustomMatrixFormMapper implements FieldDefinitionFormMapperInterface, Fiel
                 'label' => /** @Desc("Minimum number of rows") */ 'field_definition.ezmatrix.minimum_rows',
                 'translation_domain' => 'matrix_fieldtype',
                 'disabled' => $isTranslation,
-            ])
-            ->add('columns', CustomMatrixCollectionType::class, [
-                'entry_type' => ColumnType::class,
-                'entry_options' => ['required' => false],
-                'allow_add' => true,
-                'allow_delete' => true,
-                'delete_empty' => false,
-                'prototype' => true,
-                'prototype_name' => '__number__',
-                'required' => false,
-                'property_path' => 'fieldSettings[columns]',
-                'label' => /** @Desc("Columns") */ 'field_definition.ezmatrix.columns',
-                'translation_domain' => 'matrix_fieldtype',
-                'disabled' => $isTranslation,
             ]);
+//            ->add('columns', CustomMatrixCollectionType::class, [
+//                'entry_type' => ColumnType::class,
+//                'entry_options' => ['required' => false],
+//                'allow_add' => true,
+//                'allow_delete' => true,
+//                'delete_empty' => false,
+//                'prototype' => true,
+//                'prototype_name' => '__number__',
+//                'required' => false,
+//                'property_path' => 'fieldSettings[columns]',
+//                'label' => /** @Desc("Columns") */ 'field_definition.ezmatrix.columns',
+//                'translation_domain' => 'matrix_fieldtype',
+//                'disabled' => $isTranslation,
+//            ]);
     }
 
     /**
