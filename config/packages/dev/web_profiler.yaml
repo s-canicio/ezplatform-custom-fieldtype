@@ -1,0 +1,7 @@
+web_profiler:
+  toolbar: true
+
+framework:
+  profiler:
+    only_exceptions: false
+    only_master_requests: true
