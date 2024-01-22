@@ -30,14 +30,13 @@
         </div>
     </div>
     <div class="ez-scrollable-table-wrapper">
-        {{ dump(columns) }}
         <table class="ez-table table table-hover">
             <thead>
             <tr>
                 <th></th>
-                {% for column in columns %}
-                    <th data-identifier="{{ column['identifier'] }}">{{ column['name'] }}</th>
-                {% endfor %}
+	            <th>Dropdown</th>
+	            <th>Text</th>
+	            <th>Third</th>
             </tr>
             </thead>
             <tbody class="ez-table__body" data-minimum-rows="{{ minimum_rows }}" data-next-index="{{ form.entries.children|length ? max(form.entries.children|keys) + 1 : 0 }}">

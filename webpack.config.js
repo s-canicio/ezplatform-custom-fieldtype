@@ -29,6 +29,12 @@ Encore.addEntry('welcome_page', [
     path.resolve(__dirname, './assets/scss/welcome-page.scss'),
 ]);
 
+eZConfigManager.add({
+    eZConfig,
+    entryName: 'ezplatform-admin-ui-content-edit-parts-js',
+    newItems: [ path.resolve(__dirname, './assets/js/custommatrix.js'), ],
+});
+
 Encore.addEntry('app', './assets/app.js');
 
 const projectConfig = Encore.getWebpackConfig();
