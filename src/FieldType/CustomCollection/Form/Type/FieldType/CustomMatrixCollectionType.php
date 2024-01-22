@@ -60,8 +60,7 @@ class CustomMatrixCollectionType extends AbstractType
      */
     public function buildView(FormView $view, FormInterface $form, array $options): void
     {
-//        $view->vars['columns'] = $options['columns'];
-//        $view->vars['minimum_rows'] = $options['minimum_rows'];
+        $view->vars['minimum_rows'] = $options['minimum_rows'];
     }
 
     /**
